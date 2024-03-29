@@ -9,7 +9,6 @@ import java.util.List;
 public interface TaskService {
     TaskEntity saveTask(TaskEntity entity);
     TaskEntity updateTask(int id,TaskEntity entity);
-
     void deleteTask(int id);
     List<TaskEntity> getAllTasks();
 
