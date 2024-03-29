@@ -1,0 +1,57 @@
+#mainContainer{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 60px;
+    background: white;
+    padding-bottom: 30px;
+    align-items: center;
+    width: 400px;
+    border-radius: 30px;
+
+}
+
+.Header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 30px;
+    margin-bottom: 40px;
+
+}
+.Text{
+    font-weight: bold;
+    font-size: 30px;
+    color: #42006C;
+}
+.formContainer{
+    width: 300px;
+    align-items: center;
+
+}
+#input{
+    background: #f1ecec;
+}
+.formGroupRow {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; /* Adjust spacing between rows */
+}
+
+.icon1{
+    width: 40px;
+}
+.icon2{
+    width: 35px;
+    margin-right: 6px;
+}
+#btn{
+    margin-top: 30px;
+    border-radius: 40px;
+
+    width: 100px;
+    justify-content: center;
+    font-weight: 500;
+}
+
