@@ -19,9 +19,20 @@ function UserLogin(){
 
         axios.get("http://localhost:8080/user/"+userNameValue)
             .then((response)=> {
-                setUser(response.data);
-                if(user.password===passwordValue){
+                // setUser(response.data);
+                const userData = response.data;
+                if(userData.password==passwordValue){
                     navigate("/todoApp");
+                    const logindetail={
+                        userID:userData.userId
+                    }
+                    axios.post("http://localhost:8080/UserLoginDetail",logindetail)
+                        .then(()=>{
+
+                        })
+                        .catch((error)=>{
+                            alert(error);
+                        });
 
                 }else {
                     Swal.fire({

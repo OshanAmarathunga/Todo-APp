@@ -28,10 +28,6 @@ public class TaskController {
         List<TaskEntity> entities=taskService.getAllTasks();
         return entities==null?ResponseEntity.status(404).body(null):ResponseEntity.status(200).body(entities);
     }
-
-    @GetMapping("/lastUserId")
-    public ResponseEntity
-
     @PostMapping("/task")
     public ResponseEntity<TaskEntity> saveTask(@RequestBody TaskDto dto){
         TaskEntity entity=new TaskEntity();
@@ -57,6 +53,12 @@ public class TaskController {
         TaskEntity entity=taskService.updateTask(id,taskEntity);
 
         return entity==null?ResponseEntity.status(404).body(null):ResponseEntity.status(200).body(entity);
+    }
+
+    @DeleteMapping("/task/{taskId}")
+    public void deleteTask(@PathVariable int taskId){
+        taskService.deleteTask(taskId);
+
     }
 
 }

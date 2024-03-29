@@ -32,4 +32,8 @@ public class UserEntity {
     @JsonIgnore
     private List<TaskEntity> tasks;
 
+    @OneToMany(mappedBy = "Loginuser")
+    @JsonIgnore
+    private List<UserLoginDetailEntity> loginDetailEntities;
+
 }
